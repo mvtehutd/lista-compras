@@ -5,7 +5,7 @@ PALAVRA_CHAVE: 'LOJAS' | 'NOME' | 'PRODUTO' | 'MEDIDA' | 'QUANTIDADE' | 'PREÇO'
 
 UNIDADE: 'UN' | 'KG' | 'L';
 
-PROPRIEDADE: 'Economia' | 'Caro';
+PROPRIEDADE: 'Economia' | 'Economia Exata' | 'Caro' | 'Caro Exato';
 
 DELIM: ':';
 
@@ -27,10 +27,10 @@ programa: 'LOJAS' loja+ 'LISTA' lista 'FIM';
 
 loja: 'NOME' DELIM IDENT produto_loja+;
 
-produto_loja: 'PRODUTO' DELIM IDENT 'MEDIDA' DELIM numero UNIDADE 'PREÇO' DELIM numero;
+produto_loja: 'PRODUTO' DELIM IDENT 'MEDIDA' DELIM quant = numero UNIDADE 'PREÇO' DELIM valor = numero;
 
 numero: NUM_INT | NUM_REAL;
 
 lista: 'NOME' DELIM IDENT 'PROPRIEDADE' DELIM PROPRIEDADE produto_lista+;
 
-produto_lista: 'PRODUTO' DELIM IDENT 'QUANTIDADE' DELIM numero UNIDADE;
+produto_lista: 'PRODUTO' DELIM IDENT 'QUANTIDADE' DELIM quant = numero UNIDADE;

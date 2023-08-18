@@ -1,6 +1,5 @@
 package br.ufscar.dc.compiladores.lc.gerador;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -37,8 +36,10 @@ public class TabelaDeSimbolos {
         this.tabela = new HashMap<>();
     }
 
-    public void adicionar(String nome, TipoLc tipo, TabelaDeSimbolos produtos, Float preco, Float quantidade) {
-        tabela.put(nome, new EntradaTabelaDeSimbolos(nome, tipo, produtos, preco, quantidade));
+    public void adicionar(String nome, TipoLc tipo, TabelaDeSimbolos produtos, String preco, String quantidade) {
+        Float precoConvertido = preco != null ? Float.parseFloat(preco.replace(",", ".")): null;
+        Float quantidadeConvertida = quantidade != null ? Float.parseFloat(quantidade.replace(",", ".")): null;
+        tabela.put(nome, new EntradaTabelaDeSimbolos(nome, tipo, produtos, precoConvertido, quantidadeConvertida));
     }
 
     public boolean existeLoja(String nomeLoja){
@@ -46,6 +47,28 @@ public class TabelaDeSimbolos {
             return tabela.get(nomeLoja).tipo.equals(TipoLc.LOJA);
         }
         return false;
+    }
+
+    public boolean existe(String nome){
+        return tabela.containsKey(nome);
+    }
+
+    public TipoLc verificaTipo(String nome){
+       return tabela.get(nome).tipo;
+    }
+
+    public TipoLc verificaTipoProdutoLojas(String nome){
+        for (Entry<String, EntradaTabelaDeSimbolos> entry : tabela.entrySet()) {
+            String chave = entry.getKey();
+            EntradaTabelaDeSimbolos entrada = tabela.get(chave);
+            if(entrada.tipo.equals(TipoLc.LOJA)){
+                TabelaDeSimbolos produtos = entrada.produtos;
+                if(produtos.tabela.containsKey(nome)){
+                    return produtos.verificaTipo(nome);
+                }
+            }
+        }
+        return null;
     }
 
     // public boolean existeNaLoja(String nome) {
