@@ -1,5 +1,6 @@
 package br.ufscar.dc.compiladores.lc.gerador;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,12 +14,12 @@ public class TabelaDeSimbolos {
         LOJA;
     }
 
-    class EntradaTabelaDeSimbolos {
-        String nome;
-        TipoLc tipo;
-        TabelaDeSimbolos produtos;
-        Float preco;
-        Float quantidade;
+    public class EntradaTabelaDeSimbolos {
+        public String nome;
+        public TipoLc tipo;
+        public TabelaDeSimbolos produtos;
+        public Float preco;
+        public Float quantidade;
 
         private EntradaTabelaDeSimbolos(String nome, TipoLc tipo, TabelaDeSimbolos produtos, Float preco, Float quantidade) {
             this.nome = nome;
@@ -34,6 +35,10 @@ public class TabelaDeSimbolos {
 
     public TabelaDeSimbolos() {
         this.tabela = new HashMap<>();
+    }
+
+    public Map<String, EntradaTabelaDeSimbolos> getTabela() {
+        return Collections.unmodifiableMap(tabela) ;
     }
 
     public void adicionar(String nome, TipoLc tipo, TabelaDeSimbolos produtos, String preco, String quantidade) {
