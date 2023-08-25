@@ -5,7 +5,7 @@ PALAVRA_CHAVE: 'LOJAS' | 'NOME' | 'PRODUTO' | 'MEDIDA' | 'QUANTIDADE' | 'PREÇO'
 
 UNIDADE: 'UN' | 'KG' | 'L';
 
-PROPRIEDADE: 'Economia' | 'Economia Exata' | 'Caro' | 'Caro Exato';
+PROPRIEDADE: 'Economia' | 'Caro' ;
 
 DELIM: ':';
 

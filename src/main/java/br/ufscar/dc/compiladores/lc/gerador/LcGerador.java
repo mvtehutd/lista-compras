@@ -1,8 +1,8 @@
 package br.ufscar.dc.compiladores.lc.gerador;
 
 import br.ufscar.dc.compiladores.lc.gerador.TabelaDeSimbolos.TipoLc;
+import br.ufscar.dc.compiladores.lc.gerador.calculadoras.Calculavel;
 import br.ufscar.dc.compiladores.lc.gerador.calculadoras.CalculadoraEconomia;
-import br.ufscar.dc.compiladores.lc.gerador.calculadoras.CalculadoraEconomiaBasica;
 import br.ufscar.dc.compiladores.parser.LcBaseVisitor;
 import br.ufscar.dc.compiladores.parser.LcParser.LojaContext;
 import br.ufscar.dc.compiladores.parser.LcParser.Produto_listaContext;
@@ -12,8 +12,6 @@ import br.ufscar.dc.compiladores.parser.LcParser.ProgramaContext;
 public class LcGerador extends LcBaseVisitor<Void> {
 
     TabelaDeSimbolos tabela;
-
-    String propriedadeLista;
 
     StringBuilder saida;
 
@@ -47,10 +45,11 @@ public class LcGerador extends LcBaseVisitor<Void> {
 
         // Fazer o cálculo para montar a lista desejada nas lojas e suas tabelas HTML
         /////////////
-        CalculadoraEconomia calculoEcnomia = null;
+        String propriedadeLista = ctx.lista().PROPRIEDADE().getText();
+        Calculavel calculoEcnomia = null;
         switch (propriedadeLista) {
             case "Economia":
-                calculoEcnomia = new CalculadoraEconomiaBasica();
+                calculoEcnomia = new CalculadoraEconomia();
                 break;
         
             default:
