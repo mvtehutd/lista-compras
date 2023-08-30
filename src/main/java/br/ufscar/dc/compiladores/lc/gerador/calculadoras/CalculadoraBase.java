@@ -32,6 +32,11 @@ public abstract class CalculadoraBase implements Calculavel {
                         "<td>R$ " + formatNumber(produto.getQuantoComprar() * produto.getPreco(), "0.00") + "</td>\n" +
                         "</tr>\n");
             });
+            listHtmlLoja
+                    .append("<tr>\n<th></th>\n<th></th>\n<th></th>\n<th></th>\n<th>Total</th>\n<th>R$  " + formatNumber(
+                            loja.getProdutos().stream()
+                                    .mapToDouble(produto -> produto.getQuantoComprar() * produto.getPreco()).sum(),
+                            "0.00") + "</th>\n</tr>\n");
             listHtmlLoja.append("</tbody>\n</table>\n<br><br><br>\n");
         });
 

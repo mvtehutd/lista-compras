@@ -2,6 +2,7 @@ package br.ufscar.dc.compiladores.lc.gerador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -53,9 +54,16 @@ public class Principal {
         if(LcSemanticoUtils.errosSemanticos.isEmpty()) {
             LcGerador agc = new LcGerador();
             agc.visitPrograma(arvore);
-            try(PrintWriter pw = new PrintWriter(args[1])) {
+            try(PrintWriter pw = new PrintWriter(args[1], StandardCharsets.UTF_8)) {
                 pw.print(agc.saida.toString());
                 System.out.println(agc.saida.toString());
+            }
+        } else{
+            for (String string : LcSemanticoUtils.errosSemanticos) {
+                System.out.println(string);
+            }
+            if(!LcSemanticoUtils.errosSemanticos.isEmpty()){
+                System.out.println("Fim da compilacao");
             }
         }
     }

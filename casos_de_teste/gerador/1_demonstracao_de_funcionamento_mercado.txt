@@ -1,0 +1,42 @@
+
+LOJAS
+	NOME: Supermercado Serv Bem
+	PRODUTO: Arroz
+	MEDIDA: 5 KG 
+	PREÇO: 2,50
+
+	PRODUTO: Coca Cola
+	MEDIDA: 2 L 
+	PREÇO: 8,70
+
+	PRODUTO: Leite 
+	MEDIDA: 1 L
+	PREÇO: 5
+	
+	NOME: Barracao
+	PRODUTO: Arroz 
+	MEDIDA: 7 KG
+	PREÇO: 3
+
+	PRODUTO: Coca Cola 
+	MEDIDA: 1 L 
+	PREÇO: 5,3
+
+	PRODUTO: Leite
+	MEDIDA: 1,5 L
+	PREÇO: 8
+
+LISTA
+	NOME: Compras Setembro
+	PROPRIEDADE: Economia
+
+	PRODUTO: Arroz 
+	QUANTIDADE: 10 KG
+
+	PRODUTO: Coca Cola 
+	QUANTIDADE: 3 L
+
+	PRODUTO: Leite
+	QUANTIDADE: 4 L
+FIM
+	
