@@ -45,10 +45,10 @@ public class LcGerador extends LcBaseVisitor<Void> {
         }
 
         // Fazer o cálculo para montar a lista desejada nas lojas e suas tabelas HTML
-        /////////////
         String propriedadeLista = ctx.lista().PROPRIEDADE().getText();
         saida.append("<h3>" + propriedadeLista + "</h3>\n<br>\n");
         Calculavel calculoEcnomia = null;
+        // Define como vai ser calculado as listas de produtos a serem comprados
         switch (propriedadeLista) {
             case "Economia":
                 calculoEcnomia = new CalculadoraEconomia();
@@ -60,7 +60,6 @@ public class LcGerador extends LcBaseVisitor<Void> {
         }
 
         saida.append(calculoEcnomia.retornaListaDeCompras(tabela));
-        ///////////
 
         // Adiciona o restante do HTML
         saida.append("</body>\n</html>");
@@ -71,6 +70,7 @@ public class LcGerador extends LcBaseVisitor<Void> {
     public Void visitLoja(LojaContext ctx) {
         String nomeLoja = ctx.IDENT().getText();
         TabelaDeSimbolos tabelaProdutos = new TabelaDeSimbolos();
+        // Adiciona a loja e os produtos dela na tabela
         for (Produto_lojaContext produto : ctx.produto_loja()) {
             tabelaProdutos.adicionar(produto.IDENT().getText(),
                     LcSemanticoUtils.verificaTipo(produto.UNIDADE().getText()), null,

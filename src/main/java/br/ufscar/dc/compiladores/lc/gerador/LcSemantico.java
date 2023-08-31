@@ -20,6 +20,8 @@ public class LcSemantico extends LcBaseVisitor<Void> {
     @Override
     public Void visitLoja(LojaContext ctx) {
         String nomeLoja = ctx.IDENT().getText();
+
+        // Verifica se nao existe uma loja com o mesmo nome declarada
         if (tabela.existeLoja(nomeLoja)) {
             LcSemanticoUtils.adicionarErroSemantico(ctx.IDENT().getSymbol(),
                     "Loja " + nomeLoja + " já declarada anteriormente");
@@ -45,9 +47,15 @@ public class LcSemantico extends LcBaseVisitor<Void> {
         String nomeProduto = produto.IDENT().getText();
         if (!tabelaProdutos.existe(nomeProduto)) { // verifica se já foi declarado na lista
             String unidade = produto.UNIDADE().getText();
+
+            // Checa se a UN nao possui um nomero real como valor
             if (!(unidade.equals("UN") && produto.quant.getText().contains(","))) { // se não tem frações de uma unidade
                 TipoLc tipoProduto = tabela.verificaTipoProdutoLojas(nomeProduto);
+
+                // Verifica se o produto existe em alguma loja
                 if(tipoProduto != null){
+
+                    // Verifica se a unidade de medida na lista é compativel com as do mercado
                     if(tipoProduto.equals(LcSemanticoUtils.verificaTipo(unidade))){
                         tabelaProdutos.adicionar(nomeProduto, LcSemanticoUtils.verificaTipo(unidade), null,
                     null, produto.quant.getText());
@@ -70,15 +78,22 @@ public class LcSemantico extends LcBaseVisitor<Void> {
         }
     }
 
+    // Adiciona os produtos da loja fazendo as verificacoes necessárias
     private void adicionarProdutoLoja(TabelaDeSimbolos tabelaProdutos, Produto_lojaContext produto) {
         String nomeProduto = produto.IDENT().getText();
+
+        // Checa se o produto já está registrado na loja
         if (!tabelaProdutos.existe(nomeProduto)) {
             String unidade = produto.UNIDADE().getText();
+
+            // Checa se a UN nao possui um nomero real como valor
             if (unidade.equals("UN") && produto.quant.getText().contains(",")) {
             LcSemanticoUtils.adicionarErroSemantico(produto.UNIDADE().getSymbol(),
                     "Valor Incompatível para Medida " + unidade);
             } else{
                 TipoLc tipoProduto = tabela.verificaTipoProdutoLojas(nomeProduto);
+
+                // Verifica se os produtos declarados com mesmo nome em lojas diferentes possuem a mesma unidade de medida
                 if(tipoProduto == null || tipoProduto.equals(LcSemanticoUtils.verificaTipo(unidade))){
                     tabelaProdutos.adicionar(nomeProduto, LcSemanticoUtils.verificaTipo(unidade), null,
                 produto.valor.getText(), produto.quant.getText());

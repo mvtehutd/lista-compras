@@ -3,6 +3,9 @@ package br.ufscar.dc.compiladores.lc.gerador.calculadoras;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Classe de representação para as Lojas armazenadas na tabela de simbolos
+ */
 public class Loja {
     
     private String nome;

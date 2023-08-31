@@ -76,38 +76,5 @@ public class TabelaDeSimbolos {
         return null;
     }
 
-    // public boolean existeNaLoja(String nome) {
-    //     if (tabela.containsKey(nome)) {
-    //         return true;
-    //     }
-    //     for (Map.Entry<String, EntradaTabelaDeSimbolos> entry : tabela.entrySet()) {
-    //         String key = entry.getKey();
-    //         TabelaDeSimbolos tabelaAdicional = tabela.get(key).registro;
-    //         if (tabelaAdicional != null && tabelaAdicional.existe(nome)) {
-    //             return true;
-    //         }
-    //     }
-    //     return false;
-    // }
-
-    // public boolean existeNaTabelaPrincipal(String nome) {
-    //     return tabela.containsKey(nome);
-    // }
-
-    // public TipoLa verificar(String nome) {
-    //     TipoLa tipo = TipoLa.INVALIDO;
-    //     if (tabela.get(nome) != null) {
-    //         return tabela.get(nome).tipo;
-    //     } else {
-    //         for (Map.Entry<String, EntradaTabelaDeSimbolos> entry : tabela.entrySet()) {
-    //             String key = entry.getKey();
-    //             TabelaDeSimbolos tabelaAdicional = tabela.get(key).registro;
-    //             if (tabelaAdicional != null && tabelaAdicional.existe(nome)) {
-    //                 return tabelaAdicional.tabela.get(nome).tipo;
-    //             }
-    //         }
-    //     }
-    //     return tipo;
-    // }
 
 }
