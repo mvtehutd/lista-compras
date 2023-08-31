@@ -1,0 +1,54 @@
+
+LOJAS
+	NOME: Padaria do Seu Joao
+
+	PRODUTO: Pao
+	MEDIDA: 0,1 KG 
+	PREÇO: 1,39
+
+	PRODUTO: Sonho
+	MEDIDA: 0,1 KG 
+	PREÇO: 2,50
+
+	PRODUTO: Coxinha
+	MEDIDA: 1 UN
+	PREÇO: 7
+
+	PRODUTO: Suco
+	MEDIDA: 0,5 L
+	PREÇO: 5
+	
+	NOME: Padaria Central
+
+	PRODUTO: Pao
+	MEDIDA: 0,1 KG 
+	PREÇO: 1,50
+
+	PRODUTO: Sonho
+	MEDIDA: 0,1 KG 
+	PREÇO: 3
+
+	PRODUTO: Coxinha
+	MEDIDA: 1 UN
+	PREÇO: 7,50
+	
+	PRODUTO: Suco
+	MEDIDA: 0,5 L
+	PREÇO: 5,50
+
+LISTA
+	NOME: Cafe da Manha da Viagem
+	PROPRIEDADE: Economia
+
+	PRODUTO: Pao
+	QUANTIDADE: 0,5 KG
+
+	PRODUTO: Sonho
+	QUANTIDADE: 0,2 KG
+
+	PRODUTO: Coxinha
+	QUANTIDADE: 2 UN
+
+	PRODUTO: Suco
+	QUANTIDADE: 0,5 L
+FIM

@@ -1,0 +1,71 @@
+LOJAS
+	NOME: Barraca da Dona Vera
+
+	PRODUTO: Tomate
+	MEDIDA: 1 KG 
+	PREÇO: 5,20
+
+	PRODUTO: Pimentao
+	MEDIDA: 1 KG 
+	PREÇO: 4,50
+
+	PRODUTO: Pera
+	MEDIDA: 1 KG
+	PREÇO: 6,60
+
+	PRODUTO: Morango
+	MEDIDA: 0,1 KG
+	PREÇO: 3,80
+	
+	NOME: Quitanda do Jao
+
+	PRODUTO: Tomate
+	MEDIDA: 1 KG 
+	PREÇO: 5
+
+	PRODUTO: Pimentao
+	MEDIDA: 1 KG 
+	PREÇO: 4,70
+
+	PRODUTO: Pera
+	MEDIDA: 1 KG
+	PREÇO: 6,10
+
+	PRODUTO: Morango
+	MEDIDA: 0,1 KG
+	PREÇO: 4
+
+	NOME: Barraca do Tio Chico
+
+	PRODUTO: Tomate
+	MEDIDA: 1 KG 
+	PREÇO: 5,30
+
+	PRODUTO: Pimentao
+	MEDIDA: 1 KG 
+	PREÇO: 4,90
+
+	PRODUTO: Pera
+	MEDIDA: 1 KG
+	PREÇO: 6,70
+
+	PRODUTO: Morango
+	MEDIDA: 0,1 KG
+	PREÇO: 4,20
+
+LISTA
+	NOME: Feira da Semana
+	PROPRIEDADE: Economia
+
+	PRODUTO: Tomate
+	QUANTIDADE: 2 KG 
+
+	PRODUTO: Pimentao
+	QUANTIDADE: 1,5 KG 
+
+	PRODUTO: Pera
+	QUANTIDADE: 1 KG
+
+	PRODUTO: Morango
+	QUANTIDADE: 0,2 KG
+FIM
