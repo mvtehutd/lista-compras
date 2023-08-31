@@ -3,6 +3,9 @@ package br.ufscar.dc.compiladores.lc.gerador.calculadoras;
 import br.ufscar.dc.compiladores.lc.gerador.TabelaDeSimbolos;
 import br.ufscar.dc.compiladores.lc.gerador.TabelaDeSimbolos.TipoLc;
 
+/**
+ * Classe para a representação de um Produto na tabela de simbolos
+ */
 public class Produto {
 
     private String nome;
@@ -23,11 +26,8 @@ public class Produto {
     }
     
     public Produto(TabelaDeSimbolos.EntradaTabelaDeSimbolos entradaTabelaDeSimbolos) {
-        System.out.println("Entrada Tabela:\n");
-        System.out.println("\tNome: " + entradaTabelaDeSimbolos.nome + "\n");
-        System.out.println("\tPreco: " + entradaTabelaDeSimbolos.preco + "\n");
-        System.out.println("\tMedida: " + entradaTabelaDeSimbolos.quantidade + "\n");
-        
+        // Transforma a tabela de simbolos em um Produto
+        // O custo beneficio já é calculado durante a criacao do objeto
         this.nome = entradaTabelaDeSimbolos.nome;
         this.preco = entradaTabelaDeSimbolos.preco != null ? entradaTabelaDeSimbolos.preco : null;
         this.medida = entradaTabelaDeSimbolos.quantidade;
@@ -42,6 +42,7 @@ public class Produto {
         return sobra;
     }
 
+    // Define a quantidade de produtos que deve ser comprada para atender a demanda da lista
     public void setQuantoComprar(Float precisaComprar) {
         Float diferença = this.medida - precisaComprar;
         Float medidaAux = this.medida;
