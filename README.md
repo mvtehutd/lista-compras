@@ -72,7 +72,7 @@ Após criada as listas de produtos por loja, será gerado um arquivo HTML exibin
 
 **Observação:** Há uma pasta no diretório raíz com os casos de teste para verificação de erros e demonstração de funcionamento do programa.
 
-**Vídeo Demonstrativo:**
+**Vídeo Demonstrativo:** https://youtu.be/vfs9xQ4TdmM
 
 ## Como Utilizar o Programa
 ### 1.	Programas Necessários
@@ -87,12 +87,19 @@ Nas compilações e execuções realizadas nesse trabalho, as versões utilizada
 
 ### 2.	Compilação e Execução do Programa
 Para compilar o código, acesse o diretório em que foi salvo o projeto em sua máquina e execute o comando ```mvn package``` no terminal para que o Maven crie os arquivos e o programa com extensão *.jar* necessários.
-  
+  <div align="center"> 
+    
    ![image](https://github.com/mvtehutd/lista-compras/assets/100847921/efe9f60c-9db2-4fb6-806a-2134867554ba)
+   
+   </div>
 
 <p align="center"><i><b>Imagem 1:</b> Realizando a Compilação</i></p>
 
+<div align="center"> 
+  
 ![image](https://github.com/mvtehutd/lista-compras/assets/100847921/f8c462de-e763-4f49-a1f3-e843aa6a0358)
+
+</div> 
 
 <p align="center"><i><b>Imagem 2:</b> Mensagem Indicando Sucesso na Compilação</i></p>
 
@@ -102,21 +109,28 @@ Com a compilação finalizada, é possível executar o programa. Para isso, o co
 
   Sendo que: </br>
 -	```<caminho do compilador>``` é o caminho completo até o arquivo de extensão *.jar* criado, lembrando de escolher o com as dependências. Ele está localizado na pasta target:
- 
+ <div align="center"> 
+   
 ![image](https://github.com/mvtehutd/lista-compras/assets/100847921/947d9e47-85ac-4040-8ab4-94246fed4f8f)
+
+</div>
 
 <p align="center"><i><b>Imagem 3:</b> Localizando o Compilador no Projeto</i></p>
 
 -	```<arquivo de entrada>``` é o caminho completo até o arquivo de extensão *.txt* com o algoritmo a ser analisado.
-
+<div align="center">
+  
  ![image](https://github.com/mvtehutd/lista-compras/assets/100847921/b2a8af3d-df57-494f-a26f-6fc6f8137cee)
- 
+
+ </div>
 <p align="center"><i><b>Imagem 4:</b> Exemplo de Arquivo de Entrada</i></p>
 
 -	```<arquivo de saída>``` é o caminho completo até o arquivo de extensão *.html* na qual serão salvos os resultados da análise.
-
+<div align="center"> 
+  
  ![image](https://github.com/mvtehutd/lista-compras/assets/100847921/b7259e4f-acb8-49fd-ad0a-05c16e79e41f)
 
+</div>
 <p align="center"><i><b>Imagem 5:</b> Exemplo de Arquivo de Saída</i></p>
 
 Exemplo de como o analisador deve rodar:
