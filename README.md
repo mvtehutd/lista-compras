@@ -41,11 +41,11 @@ Após criada as listas de produtos por loja, será gerado um arquivo HTML exibin
       
 - Faça a declaração da lista, com a palavra reservada "LISTA";
 - Declare o nome da lista com: ```NOME: <Nome da Lista>```, inserindo uma quebra de linha após o término da declaração;
-- Declare a propriedade da lista com: ```PROPRIEDADE: <Propriedade da Lista>```, inserindo uma quebra de linha após o término da declaração;
+- Declare a propriedade da lista com: ```PROPRIEDADE: <Propriedade da Lista>```;
 - Declare a lista de produtos desejados de acordo com o seguinte padrão:
   ```
   PRODUTO: <Nome do Produto>
-  QUANTIDADE: <Quantidade e Unidade de Medida Ofertada> 
+  QUANTIDADE: <Quantidade e Unidade de Medida> 
   ```
 - Finalize usando a palavra reservada "FIM".
 <div align="center"> 
